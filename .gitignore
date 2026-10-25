@@ -1,4 +1,11 @@
 .env
+.env.example
 node_modules/
 public/styles.css
 *.log
+README.md
+phases.md
+docs/
+RentiFlow_Full_System_PRD.docx
+design inspo/
+db/README.md
