@@ -1,0 +1,30 @@
+{
+  "name": "rentiflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RentiFlow rental management platform for the Ghanaian market",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run build:css",
+    "dev": "node --watch server.js",
+    "prestart": "npm run build:css",
+    "start": "node server.js",
+    "build:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css --minify",
+    "db:migrate": "node db/migrate.js",
+    "integrations:status": "node scripts/integration-status.js",
+    "test": "node test/validation.test.js",
+    "test:api": "node test/api.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.11.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "resend": "^6.34.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

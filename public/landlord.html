@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RentiFlow rental management for Ghana.">
+  <title>Landlord portal | RentiFlow</title>
+  <link rel="stylesheet" href="./styles.css?v=20261025">
+</head>
+<body class="min-h-screen">
+  <header class="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-10">
+    <a class="flex items-center gap-2 text-lg font-bold tracking-tight" href="/" aria-label="RentiFlow home"><span class="grid h-8 w-8 place-items-center rounded-full bg-ink text-white" aria-hidden="true">R</span> rentiflow</a>
+    <nav id="main-navigation" class="hidden items-center gap-6 text-sm text-stone-600 lg:flex" aria-label="Main navigation">
+      <a href="/properties.html">Find a home</a><a href="/#how-it-works">How it works</a><a href="/#landlords">For landlords</a>
+    </nav>
+    <div class="flex items-center gap-3"><a class="text-sm font-semibold" href="/login.html">Sign in</a><a class="button-primary py-2.5" href="/login.html?mode=register">Get started</a><button class="rounded-md p-2 lg:hidden" data-action="toggle-menu" aria-label="Toggle navigation" aria-expanded="false">☰</button></div>
+  </header><main class="mx-auto max-w-7xl px-5 py-12 lg:px-10" data-page="landlord">
+  <div class="flex flex-wrap items-end justify-between gap-4"><div><p class="eyebrow">Landlord portal</p><h1 class="display-heading mt-3 text-4xl">Manage your properties</h1><p id="welcome-user" class="mt-2 text-sm text-stone-500"></p></div><button class="button-secondary" data-action="logout">Sign out</button></div>
+  <section class="mt-8 rounded-xl bg-white p-6 shadow-sm"><p class="eyebrow">New listing</p><h2 id="property-form-heading" class="mt-2 text-xl font-semibold">Submit a property</h2><p class="mt-2 text-sm text-stone-500">Listings are reviewed before they appear in public search. Editing a published listing sends it for review again.</p><form id="property-form" class="mt-5 grid gap-3 sm:grid-cols-2"><label class="text-sm font-semibold sm:col-span-2">Title<input name="title" required minlength="3" maxlength="160" class="field mt-2 rounded-md border border-stone-300 p-3"></label><label class="text-sm font-semibold sm:col-span-2">Description<textarea name="description" required minlength="10" maxlength="5000" rows="4" class="field mt-2 rounded-md border border-stone-300 p-3"></textarea></label><label class="text-sm font-semibold">Location<input name="location" required class="field mt-2 rounded-md border border-stone-300 p-3" placeholder="Osu, Accra"></label><label class="text-sm font-semibold">Type<select name="propertyType" class="field mt-2 rounded-md border border-stone-300 p-3"><option value="apartment">Apartment</option><option value="house">House</option><option value="room">Room</option></select></label><label class="text-sm font-semibold">Monthly rent (GHS)<input name="monthlyRentGhs" required type="number" min="1" step="0.01" class="field mt-2 rounded-md border border-stone-300 p-3"></label><label class="text-sm font-semibold">Bedrooms<input name="bedrooms" required type="number" min="1" class="field mt-2 rounded-md border border-stone-300 p-3"></label><label class="text-sm font-semibold">Bathrooms<input name="bathrooms" required type="number" min="1" class="field mt-2 rounded-md border border-stone-300 p-3"></label><label class="text-sm font-semibold">Size (m², optional)<input name="sizeSquareMetres" type="number" min="1" class="field mt-2 rounded-md border border-stone-300 p-3"></label><label class="text-sm font-semibold sm:col-span-2">Image URL (HTTPS)<input name="imageUrl" type="url" class="field mt-2 rounded-md border border-stone-300 p-3"></label><div class="flex gap-3"><button id="property-submit-button" class="button-primary w-fit" type="submit">Submit for review</button><button id="property-edit-cancel" class="button-secondary hidden" type="button">Cancel edit</button></div></form><p id="property-feedback" class="mt-3 text-sm" role="status"></p></section>
+  <section class="mt-6 rounded-xl bg-white p-6 shadow-sm"><div class="flex items-center justify-between"><div><p class="eyebrow">Portfolio</p><h2 class="mt-2 text-xl font-semibold">Your listings</h2></div><span id="property-count" class="rounded-full bg-sage px-3 py-1 text-xs font-semibold">0</span></div><div id="properties-list" class="mt-5 grid gap-3 md:grid-cols-2"></div></section>
+  <section class="mt-6 rounded-xl bg-white p-6 shadow-sm"><h2 class="text-xl font-semibold">Applications to review</h2><div id="landlord-applications-list" class="mt-5 grid gap-3"></div></section>
+</main>  <footer class="mx-auto mt-16 flex max-w-7xl flex-wrap items-center justify-between gap-4 border-t border-stone-300 px-5 py-7 text-xs text-stone-500 lg:px-10"><a class="font-semibold text-ink" href="/">RentiFlow</a><span>© 2026 RentiFlow · Renting, made human.</span><span class="flex gap-5"><a href="/#help">Help</a><a href="/#privacy">Privacy</a><a href="/#terms">Terms</a></span></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
+

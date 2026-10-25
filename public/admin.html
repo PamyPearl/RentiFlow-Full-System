@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RentiFlow rental management for Ghana.">
+  <title>Administrator portal | RentiFlow</title>
+  <link rel="stylesheet" href="./styles.css?v=20261025">
+</head>
+<body class="min-h-screen">
+  <header class="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 lg:px-10">
+    <a class="flex items-center gap-2 text-lg font-bold tracking-tight" href="/" aria-label="RentiFlow home"><span class="grid h-8 w-8 place-items-center rounded-full bg-ink text-white" aria-hidden="true">R</span> rentiflow</a>
+    <nav id="main-navigation" class="hidden items-center gap-6 text-sm text-stone-600 lg:flex" aria-label="Main navigation">
+      <a href="/properties.html">Find a home</a><a href="/#how-it-works">How it works</a><a href="/#landlords">For landlords</a>
+    </nav>
+    <div class="flex items-center gap-3"><a class="text-sm font-semibold" href="/login.html">Sign in</a><a class="button-primary py-2.5" href="/login.html?mode=register">Get started</a><button class="rounded-md p-2 lg:hidden" data-action="toggle-menu" aria-label="Toggle navigation" aria-expanded="false">☰</button></div>
+  </header><main class="mx-auto max-w-7xl px-5 py-12 lg:px-10" data-page="admin">
+  <div class="flex flex-wrap items-end justify-between gap-4"><div><p class="eyebrow">Administrator portal</p><h1 class="display-heading mt-3 text-4xl">Platform review queues</h1><p id="welcome-user" class="mt-2 text-sm text-stone-500"></p></div><button class="button-secondary" data-action="logout">Sign out</button></div>
+  <div class="mt-8 grid gap-5 xl:grid-cols-2"><section class="rounded-xl bg-white p-6 shadow-sm"><div class="flex items-center justify-between"><div><p class="eyebrow">Manual simulation only</p><h2 class="mt-2 text-xl font-semibold">Identity review</h2></div><span id="review-count" class="rounded-full bg-sage px-3 py-1 text-xs font-semibold">0</span></div><div id="review-list" class="mt-5 grid gap-3"></div></section><section class="rounded-xl bg-white p-6 shadow-sm"><div class="flex items-center justify-between"><div><p class="eyebrow">Listing safety</p><h2 class="mt-2 text-xl font-semibold">Pending properties</h2></div><span id="moderation-count" class="rounded-full bg-sage px-3 py-1 text-xs font-semibold">0</span></div><div id="moderation-list" class="mt-5 grid gap-3"></div></section></div>
+  <section class="mt-6 rounded-xl bg-white p-6 shadow-sm"><div class="flex items-center justify-between"><div><p class="eyebrow">Privileged decisions</p><h2 class="mt-2 text-xl font-semibold">Recent audit events</h2></div><button id="load-more-audit" class="button-secondary">Load more</button></div><div id="audit-list" class="mt-5 grid gap-3"></div></section>
+</main>  <footer class="mx-auto mt-16 flex max-w-7xl flex-wrap items-center justify-between gap-4 border-t border-stone-300 px-5 py-7 text-xs text-stone-500 lg:px-10"><a class="font-semibold text-ink" href="/">RentiFlow</a><span>© 2026 RentiFlow · Renting, made human.</span><span class="flex gap-5"><a href="/#help">Help</a><a href="/#privacy">Privacy</a><a href="/#terms">Terms</a></span></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
+
